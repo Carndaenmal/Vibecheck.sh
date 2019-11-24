@@ -5,12 +5,11 @@ str=" ##VIBECHECK## "
 vibe=$(date -d "${date}" +"%s")
 i=0 
 printf "CHECKING VIBE:  \n"
-sleep 2.5;
+sleep 2.5; #emulate waiting
 while true;do echo -ne "$str\r";i=$(($i+1)); str="$str ."; 
 	if (($(($i % 10)) == 0 )) 
 	then 
 		str="$str $i%"
-		#echo -ne "$i%%"
 		
 	else
 		str="$str ."
@@ -19,9 +18,9 @@ while true;do echo -ne "$str\r";i=$(($i+1)); str="$str .";
        	then
 		break;
 	fi
-	sleep .1;clear;done &
+	sleep .1;clear;done & 
 sleep 10; 
-printf "100%%\n"
+printf "100%%\n" #does not print to 100 so manual print
 printf "\n"
 echo -ne `date`
 printf "\n"
