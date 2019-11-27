@@ -2,7 +2,7 @@
 
 F_VDOUBLE="\033#6"
 str=" ##VIBECHECK## "
-vibe=$(date -d "${date}" +"%s")
+vibe=$(date -d "${date}" +"%Y%m%d")
 i=0 
 printf "CHECKING VIBE:  \n"
 sleep 2.5;
